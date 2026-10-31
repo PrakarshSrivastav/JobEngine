@@ -1,0 +1,11 @@
+jobengine:
+  node-id: test-node
+  worker:
+    threads: 4
+    poll-interval: 100ms
+    heartbeat-interval: 1s
+    lease-timeout: 30s
+    reaper-interval: 1s
+  retry:
+    base-backoff: 50ms
+    max-backoff: 200ms

@@ -8,24 +8,12 @@
 		<version>3.5.11</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>io.github.prakarshsrivastav</groupId>
 	<artifactId>jobengine</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jobengine</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<description>Distributed job execution engine on PostgreSQL: priority queue, SKIP LOCKED claiming, retries with backoff, worker leases and a dead letter queue</description>
+	<url>https://github.com/PrakarshSrivastav/JobEngine</url>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -56,6 +44,14 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-database-postgresql</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-docker-compose</artifactId>
 			<scope>runtime</scope>
@@ -84,6 +80,11 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.awaitility</groupId>
+			<artifactId>awaitility</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
